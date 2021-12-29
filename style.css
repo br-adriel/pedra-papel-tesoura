@@ -1,0 +1,79 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  background: #2f3061;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: #3c3d7c;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #f7fff7;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  padding: 0.5rem;
+  background: #2f3061;
+  color: #fff;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.display {
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 40vw;
+}
+
+.placar {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placar > div {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.placar > div p {
+  display: inline-block;
+}
+
+.rodada {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.placar,
+.rodada {
+  background: #d4e5ed;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.playButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
