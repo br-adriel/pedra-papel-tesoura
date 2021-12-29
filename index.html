@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pedra, papel ou tesoura</title>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="display">
+      <p class="placar"></p>
+      <p class="rodada"></p>
+    </div>
+    <div class="playButtons">
+      <button><i class="fas fa-hand-rock"></i> Pedra</button>
+      <button><i class="fas fa-hand-paper"></i> Papel</button>
+      <button><i class="fas fa-hand-scissors"></i> Tesoura</button>
+    </div>
+    <script src="script.js" defer></script>
   </body>
 </html>
