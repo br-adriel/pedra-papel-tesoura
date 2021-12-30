@@ -19,6 +19,11 @@ button:hover {
   background: #3c3d7c;
 }
 
+button:disabled {
+  background: #000;
+  color: #555;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -43,7 +48,8 @@ header {
   width: 100%;
 }
 
-.placar {
+.placar,
+.vitoria {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -67,6 +73,10 @@ header {
 .placar,
 .rodada {
   background: #d4e5ed;
+}
+.placar,
+.rodada,
+.vitoria {
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -76,4 +86,14 @@ header {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem;
+}
+
+.vitoria {
+  width: 100%;
+  display: none;
+}
+
+.vitoria p {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
