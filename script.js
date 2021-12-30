@@ -6,12 +6,24 @@ const statusNode = document.getElementById("status");
 const btns = document.querySelectorAll(".playButtons button");
 const vitoriaNode = document.getElementById("dispVitoria");
 const vitoriaTextNode = document.querySelector("#dispVitoria .text");
+const btnRecomecarNode = document.getElementById("recomecar");
 
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     jogarPartida(e.originalTarget.id, computerPlay());
   });
 });
+
+btnRecomecarNode.addEventListener("click", reiniciarPartida);
+
+function reiniciarPartida() {
+  btns.forEach((btn) => {
+    btn.disabled = false;
+  });
+  vitoriaNode.style.display = "none";
+  zerarPontos();
+  atualizarPontuacao();
+}
 
 function atualizarPontuacao() {
   pontosCompNode.innerText = `${computerScore}`;
