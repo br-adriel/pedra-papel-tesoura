@@ -40,7 +40,7 @@ header {
   padding: 0.5rem 2rem;
   display: flex;
   flex-direction: column;
-  min-width: 40vw;
+  width: 100%;
 }
 
 .placar {
