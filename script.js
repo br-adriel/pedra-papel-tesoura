@@ -1,8 +1,17 @@
 let computerScore = 0;
 let playerScore = 0;
-let pontosCompNode = document.getElementById("pontosComp");
-let pontosJogNode = document.getElementById("pontosJog");
-let statusNode = document.getElementById("status");
+const pontosCompNode = document.getElementById("pontosComp");
+const pontosJogNode = document.getElementById("pontosJog");
+const statusNode = document.getElementById("status");
+const btns = document.querySelectorAll(".playButtons button");
+const vitoriaNode = document.getElementById("dispVitoria");
+const vitoriaTextNode = document.querySelector("#dispVitoria .text");
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    jogarPartida(e.originalTarget.id, computerPlay());
+  });
+});
 
 function atualizarPontuacao() {
   pontosCompNode.innerText = `${computerScore}`;
@@ -16,12 +25,19 @@ function zerarPontos() {
   atualizarPontuacao();
 }
 
-const btns = document.querySelectorAll(".playButtons button");
-btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    jogarPartida(e.originalTarget.id, computerPlay());
-  });
-});
+function verificarVitoria() {
+  if (computerScore === 5 || playerScore === 5) {
+    btns.forEach((btn) => {
+      btn.disabled = true;
+    });
+    if (computerScore === 5) {
+      vitoriaTextNode.innerText = "Você perdeu!";
+    } else {
+      vitoriaTextNode.innerText = "Você ganhou!";
+    }
+    vitoriaNode.style.display = "flex";
+  }
+}
 
 function computerPlay() {
   let jogada = Math.floor(Math.random() * 3) + 1;
@@ -113,4 +129,5 @@ function jogarPartida(playerSelection, computerSelection) {
       break;
   }
   atualizarPontuacao();
+  verificarVitoria();
 }
