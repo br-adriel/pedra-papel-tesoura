@@ -45,39 +45,3 @@ function jogarPartida(playerSelection, computerSelection) {
       }
   }
 }
-
-function jogar() {
-  let playerScore = 0;
-  let computerScore = 0;
-  let result = 0;
-  for (let i = 0; i < 5; i++) {
-    let escolhaJog = prompt("Escolha pedra, papel ou tesoura: ");
-    let escolhaComp = computerPlay();
-    result = jogarPartida(escolhaJog, escolhaComp);
-
-    console.log(` `);
-    console.log(`Você jogou ${escolhaJog}`);
-    console.log(`O computador jogou ${escolhaComp}`);
-
-    switch (result) {
-      case 1:
-        playerScore++;
-        console.log("Você ganhou!");
-        break;
-      case 2:
-        computerScore++;
-        console.log("Você perdeu!");
-        break;
-      case 0:
-        console.log("Empate.");
-        break;
-      default:
-        console.log("Escolha inválida");
-    }
-    console.log(`PLACAR`);
-    console.log(`Você: ${playerScore}`);
-    console.log(`Computador: ${computerScore}`);
-  }
-}
-
-jogar();
