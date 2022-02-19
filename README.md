@@ -1,4 +1,4 @@
-# Jogo Pedra, Papel ou Tesoura
+# Jogo Pedra, Papel ou Tesoura 
 Jogo Pedra, papel ou tesoura desenvolvido em javascript com o propósito de praticar minhas habilidades.
 
 Esse jogo foi constuída durante uma lição do [The Odin Project](https://www.theodinproject.com/).
